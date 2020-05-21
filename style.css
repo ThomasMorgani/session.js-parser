@@ -1,0 +1,135 @@
+body {
+  background-color: black;
+  color: rgb(235, 25, 235);
+  padding: 0em 4em 0em 4em;
+}
+
+p {
+  margin: 0px;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 5vh;
+  width: 100%;
+}
+
+nav h2 {
+  padding: 0px;
+}
+
+nav ul {
+  list-style: none;
+}
+
+input,
+label {
+  display: block;
+  margin-bottom: 2px;
+}
+
+label {
+  margin-top: 10px;
+}
+
+button {
+  border-radius: 5px;
+  height: 2em;
+  width: 10em;
+  color: rgb(237, 240, 75);
+  font-size: larger;
+  font-weight: bold;
+  background-color: rgb(235, 25, 235);
+  border-width: 0px;
+  margin: 20px 0px;
+}
+
+.app {
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  align-content: space-around;
+}
+
+.formSection {
+  height: 10vh;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+.formSection .alert {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+  width: 80%;
+}
+
+.fileControls {
+}
+
+.listSection {
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow-y: auto;
+}
+
+.listItem {
+  min-height: 5em;
+  width: 80%;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-radius: 5px;
+  display: flex;
+  flex: 2 1;
+  justify-content: space-between;
+
+  background-color: rgb(235, 25, 235);
+  color: black;
+}
+
+.listItem .details {
+  flex-grow: 0;
+  overflow-x: hidden;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 1em;
+}
+
+.listItem .title {
+  color: rgb(237, 240, 75);
+  font-weight: bolder;
+  font-size: large;
+}
+
+.listItem .url {
+  max-width: 80%;
+  font-weight: 400;
+  font-size: smaller;
+}
+
+.listItem .actions {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.listItem .actions a {
+  color: rgb(199, 229, 247);
+  margin: 0em 0.5em 0em 0.5em;
+}

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>SESSION.JS PARSER</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div id="app" class="app">
+      <nav class="nav">
+        <h2>SESSION.JS PARSER</h2>
+        <ul>
+          <li><a href="">DIRECTIONS</a></li>
+        </ul>
+      </nav>
+
+      <section class="formSection">
+        <div class="fileControls">
+          <label for="input">SELECT session.js file</label>
+          <input
+            id="input"
+            type="file"
+            @change="filesChange($event.target.name, $event.target.files)"
+            accept=".json,.js,application/json"
+          />
+        </div>
+        <div>
+          <button @click.prevent="formatData">FORMAT</button>
+        </div>
+
+        <div class="alert" v-if="message && message.text">
+          <p
+            :style="{'font-weight': 'bold', 'color': message.status, 'border-style': 'solid', 'border-width': '2px', 'border-color':  message.status, padding: '10px'}"
+          >
+            {{message.text}}
+          </p>
+        </div>
+      </section>
+      <section class="listSection">
+        <template v-if="windows['0']">
+          <div
+            v-for="item in windows['0'].tabs"
+            :key="item.id"
+            class="listItem"
+          >
+            <div class="details">
+              <p class="title tooltip">
+                {{item.title}}
+                <span class="tooltiptext">{{item.title}}</span>
+              </p>
+              <p class="url tooltip">
+                {{item.url}}
+                <span class="tooltiptext"> {{item.url}}</span>
+              </p>
+            </div>
+            <div class="actions">
+              <a target="blank" :href="item.url"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a target="blank" :href="item.url"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+              <a target="blank" :href="item.url"
+                ><i class="fas fa-external-link-alt"></i
+              ></a>
+            </div>
+          </div>
+        </template>
+        <template v-else>
+          <p>No Data</p>
+        </template>
+      </section>
+    </div>
+
+    <script src="https://unpkg.com/vue"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

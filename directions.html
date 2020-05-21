@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        nav {
+          display: flex;
+          flex-direction: row;
+          justify-content: flex-end;
+          width: 100%;
+        }
+  
+        nav ul {
+          list-style: none;
+        }
+        
+        img {
+            max-height: 600px;
+            max-width: 800px;
+        }
+ 
+        .listItem {
+          padding: 2px;
+        }
+      </style>
+  </head>
+  <body>
+    <nav class="nav"><ul><li><a href="./index.html">BACK</a></li></li></ul></nav>
+    <h3>Instructions</h3>
+    <ul>
+      <li>Refer to the 2 shitty pics below</li>
+      <li>login to plural site</li>
+      <li>CHANNELS
+        <ul>  
+          <li>Create and add courses to channels</li>
+          <li>Go to channels page, select a channel </li> </ul>
+      </li>
+      <li>PATHS
+        <ul>  
+          <li>Go to path's main page </li> </ul>
+      </li>
+      <li>Open browser dev tools</li>
+      <li>goto network tab, filter for xhr only</li>
+      <li>refresh page</li>
+      <li>find the entry shown in your respective screenshot</li>
+      <li>click on it, change to response tab(or preview depending on browser)</li>
+      <li>right click on root of json object (data), copy</li>
+        <li>Fill out form, paste into input box</li>
+        <li>copy output code and paste into .sh file</li>
+        <li>make script executable and run</li>
+        <li>or paste directly into terminal</li>
+        <li>go back and d.l all course materials manually</li>
+        <li>unix based systems only, edit index.html to adjust for winblows</li>
+    </ul>
+    <div style="margin-top: 20px;">
+      
+      <span><strong>Follow this if on channel page (resp should have data and content objects)</strong></span>
+      <img src="./ss.png" />
+    </div>
+    <div style="margin-top: 20px;">
+    <span ><strong>Follow this if on path page(resp should have data and path objects)</strong></span>
+    <img src="./ss2.png" />
+  </div>  
+  </body>
+</html>
